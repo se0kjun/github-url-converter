@@ -1,0 +1,31 @@
+{
+  "name": "github-url-converter",
+  "version": "1.0.0",
+  "description": "A relative paths such as src of script tag or href of link tag in HTML documents convert to URL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/se0kjun/github-url-converter.git"
+  },
+  "keywords": [
+    "github",
+    "relative",
+    "path",
+    "convert",
+    "url"
+  ],
+  "author": "Seokjun Hong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/se0kjun/github-url-converter/issues"
+  },
+  "homepage": "https://github.com/se0kjun/github-url-converter#readme",
+  "dependencies": {
+    "github-relative-url": "^1.0.0",
+    "rawgit-url-formatter": "^1.0.0",
+    "xmldom": "^0.1.22"
+  }
+}
