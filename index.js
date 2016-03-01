@@ -1,7 +1,6 @@
 'use strict';
 var githubRel = require('github-relative-url');
 var rawgitUrl = require('rawgit-url-formatter');
-var DOMParser = require('xmldom').DOMParser;
 
 var SOURCE_TAG = {
 	link: 'href',
@@ -14,8 +13,14 @@ var STYLE_TAG = [
 	'url'
 ];
 
+var parser;
+if (typeof DOMParser !== 'undefined') {
+	parser = new DOMParser();
+} else {
+	console.log('use only browser');
+}
+
 module.exports = function(htmlStr, htmlUrl) {
-	var parser = new DOMParser();
 	var parseTags = parser.parseFromString(htmlStr, "text/html");
 	var tagNames = Object.keys(SOURCE_TAG);
 	var forEach = Array.prototype.forEach;
